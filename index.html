@@ -8,35 +8,61 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; font-family: 'Montserrat', sans-serif; background:#F4E8DA; color:#4A4A4A; }
-header { background: radial-gradient(circle at top left, rgba(200,200,200,0.4), transparent 60%), radial-gradient(circle at bottom right, rgba(150,150,150,0.3), transparent 60%); text-align:center; padding:100px 20px; }
-header h1 { font-family:'Playfair Display', serif; font-size:3.5em; margin:0; letter-spacing:2px; }
-header p { font-size:1.2em; margin-top:10px; }
-section { max-width:900px; margin:auto; padding:60px 20px; }
-h2 { font-family:'Playfair Display', serif; font-size:2em; margin-bottom:20px; border-bottom:1px solid #aaa; display:inline-block; padding-bottom:5px; }
-.card { background:white; padding:25px; margin-bottom:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.05); }
-ul { list-style:none; padding:0; }
-ul li { margin-bottom:10px; }
-footer { background:#555; color:white; text-align:center; padding:30px; }
-.button { display:inline-block; margin-top:20px; padding:12px 25px; background:#555; color:white; text-decoration:none; border-radius:30px; transition:0.3s; }
+/* Grunddesign */
+body { margin:0; font-family: 'Montserrat', sans-serif; background:#F5E9DC; color:#4A4A4A; }
+a { text-decoration:none; color:#4A4A4A; }
+
+/* Header / Hero */
+header {
+  position: relative;
+  height: 80vh;
+  background: url('images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+header h1 { font-family: 'Playfair Display', serif; font-size:4em; margin:0; }
+header p { font-size:1.5em; margin-top:10px; }
+
+/* Sektionen */
+section { max-width:1000px; margin:auto; padding:60px 20px; }
+h2 { font-family:'Playfair Display', serif; font-size:2.2em; margin-bottom:20px; border-bottom:2px solid #aaa; display:inline-block; padding-bottom:5px; }
+
+/* Karten */
+.card { background:white; padding:25px; margin-bottom:25px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+
+/* Galerie */
+.gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
+.gallery img { width:250px; height:250px; object-fit:cover; border-radius:10px; transition: transform 0.3s, box-shadow 0.3s; }
+.gallery img:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* Kontaktbutton */
+.button { display:inline-block; margin-top:20px; padding:12px 25px; background:#555; color:white; border-radius:30px; transition:0.3s; }
 .button:hover { background:#333; }
+
+/* Footer */
+footer { background:#555; color:white; text-align:center; padding:30px; }
 </style>
 </head>
+
 <body>
 
 <header>
 <h1>Haarscharf by Anna</h1>
-<p>Dein Friseur für Stil, Eleganz & Persönlichkeit</p>
+<p>Dein exklusiver Friseur in [Stadt]</p>
 </header>
 
-<section>
+<section id="about">
 <h2>Über Anna</h2>
 <div class="card">
 <p>Ich bin Anna, leidenschaftliche Friseurin mit Liebe zum Detail. Mein Ziel ist es, deinen individuellen Stil zu unterstreichen und dich strahlen zu lassen.</p>
 </div>
 </section>
 
-<section>
+<section id="services">
 <h2>Leistungen</h2>
 <div class="card">
 <ul>
@@ -49,7 +75,7 @@ footer { background:#555; color:white; text-align:center; padding:30px; }
 </div>
 </section>
 
-<section>
+<section id="prices">
 <h2>Preise</h2>
 <div class="card">
 <ul>
@@ -62,7 +88,17 @@ footer { background:#555; color:white; text-align:center; padding:30px; }
 </div>
 </section>
 
-<section>
+<section id="gallery">
+<h2>Galerie</h2>
+<div class="gallery">
+<img src="images/schnitt1.jpg" alt="Haarschnitt Damen">
+<img src="images/schnitt2.jpg" alt="Haarschnitt Herren">
+<img src="images/schnitt3.jpg" alt="Färben & Styling">
+<img src="images/schnitt4.jpg" alt="Kinderhaarschnitt">
+</div>
+</section>
+
+<section id="contact">
 <h2>Kontakt</h2>
 <div class="card">
 <p><strong>Adresse:</strong> Musterstraße 1, 12345 Musterstadt</p>
